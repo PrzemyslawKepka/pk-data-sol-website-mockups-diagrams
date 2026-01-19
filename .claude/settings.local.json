@@ -5,7 +5,8 @@
       "Bash(pip install:*)",
       "Bash(source ../venv/bin/activate)",
       "Bash(python:*)",
-      "mcp__ide__getDiagnostics"
+      "mcp__ide__getDiagnostics",
+      "Bash(source:*)"
     ]
   }
 }
