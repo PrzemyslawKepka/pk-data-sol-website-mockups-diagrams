@@ -27,6 +27,8 @@ GRAPH_ATTR = {
     "bgcolor": "white",
     "pad": "0.5",
     "splines": "ortho",
+    "label": "Customer Opinions ETL Pipeline",
+    "labelloc": "t",
 }
 
 
@@ -34,7 +36,6 @@ def generate_diagram():
     """Generate the ETL pipeline architecture diagram."""
 
     with Diagram(
-        "Customer Opinions ETL Pipeline",
         filename=OUTPUT_FILENAME,
         show=False,
         direction="LR",
