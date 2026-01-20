@@ -5,14 +5,15 @@ All orchestrated by Apache Airflow.
 """
 
 import os
-from diagrams import Diagram, Cluster, Edge
-from diagrams.onprem.workflow import Airflow
+
+from diagrams import Cluster, Diagram, Edge
+from diagrams.custom import Custom
+from diagrams.generic.storage import Storage
 from diagrams.onprem.analytics import Tableau
 from diagrams.onprem.client import Users
-from diagrams.generic.storage import Storage
-from diagrams.programming.language import Python
 from diagrams.onprem.network import Internet
-from diagrams.custom import Custom
+from diagrams.onprem.workflow import Airflow
+from diagrams.programming.language import Python
 
 # Custom icon path
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -38,7 +39,6 @@ def generate_diagram():
         direction="LR",
         graph_attr=GRAPH_ATTR,
     ):
-
         # Orchestration layer - Airflow at the top
         with Cluster("Orchestration"):
             airflow = Airflow("Apache Airflow\nScheduler & DAGs")
@@ -47,7 +47,6 @@ def generate_diagram():
         with Cluster("Data Sources"):
             with Cluster("External APIs"):
                 survey_api = Internet("Survey\nProvider API")
-                social_api = Internet("Social Media\nAPI")
 
             with Cluster("File Sources"):
                 sftp_server = Storage("SFTP Server\n(Partner Data)")
@@ -81,7 +80,6 @@ def generate_diagram():
 
         # Connections - Data flow from sources to staging
         survey_api >> Edge(label="API Pull") >> python_etl
-        social_api >> Edge(label="API Pull") >> python_etl
         sftp_server >> Edge(label="SFTP") >> python_etl
         csv_files >> Edge(label="Load") >> python_etl
 
