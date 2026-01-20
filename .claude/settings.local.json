@@ -6,7 +6,9 @@
       "Bash(source ../venv/bin/activate)",
       "Bash(python:*)",
       "mcp__ide__getDiagnostics",
-      "Bash(source:*)"
+      "Bash(source:*)",
+      "Bash(/Users/przemyslawkepka/Desktop/GIT_NEW/pk-data-sol-website-mockups/venv/bin/pip install:*)",
+      "Bash(/Users/przemyslawkepka/Desktop/GIT_NEW/pk-data-sol-website-mockups/venv/bin/python:*)"
     ]
   }
 }
