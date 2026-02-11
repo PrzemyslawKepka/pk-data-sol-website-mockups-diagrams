@@ -2,7 +2,7 @@ This is a helper repository for my main repo, where I store the code for my port
 
 /Users/przemyslawkepka/Desktop/GIT_NEW/pk-data-sol
 
-And crucial part of the website is Projects section, where I list and thoroughly
+1) Crucial part of the website is Projects section, where I list and thoroughly
 describe projects that I have done so far in my professional career.
 
 /Users/przemyslawkepka/Desktop/GIT_NEW/pk-data-sol/src/content/projects
@@ -21,6 +21,11 @@ Examples:
 - Powerpoint automation - python script generating PowerPoint file
 - Bank statement PDF automation - python script generating PDF file
 - Streamlit project - python script creating Streamlit app
+
+2) For blog posts we will also generate additional diagrams or charts
+
+But these are simple, we just generate them and use images directly, there's no need for any screenshoting
+
 
 Technical note: 
 We use venv here, so once a new package is introduced then please update the requirements file
