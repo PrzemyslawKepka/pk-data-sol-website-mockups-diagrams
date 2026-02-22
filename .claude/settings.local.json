@@ -11,7 +11,8 @@
       "Bash(/Users/przemyslawkepka/Desktop/GIT_NEW/pk-data-sol-website-mockups/venv/bin/python:*)",
       "Bash(streamlit run:*)",
       "Bash(curl:*)",
-      "Bash(pkill:*)"
+      "Bash(pkill:*)",
+      "Bash(python3:*)"
     ]
   }
 }
